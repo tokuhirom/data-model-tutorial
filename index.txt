@@ -8,6 +8,8 @@ id:yappo さんがつくっている O/R Mapper。新興のものでチュート
 
 * つかってみる
 
+** DBI を対象につかってみる
+
 Data::Model は、Data::Model のスキーマ定義からCREATE TABLE 文を発行することができ
 ます。なので、まずはスキーマ定義を Perl で書きます。
 
@@ -34,3 +36,14 @@ see script/dump_schema.pl
 see script/crud.pl
 
 に、簡単な SELECT/INSERT/UPDATE/DELETE の例をのせておきました。
+
+** Memcached をつかってみる
+
+Data::Model ではストレージとして SQLite の他に memcached protocol によるデータの
+保存にも対応しています。ここではいわゆる hash database 的なものをつかうことが想定
+されています。Tokyo Tyrant などをストレージとして、Data::Model でデータをあつかえ
+るということです。
+
+Memcached をつかう場合の例は下記のスクリプトにおいてあります。
+
+see script/memcached.pl
