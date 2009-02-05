@@ -11,9 +11,7 @@ my $dm = Neko::DB::User->new();
     my $driver = Data::Model::Driver::DBI->new(
         dsn => 'dbi:SQLite:'
     );
-    for my $model ($dm->schema_names) {
-        $dm->set_driver($model, $driver);
-    }
+    $dm->set_base_driver($driver);
 }
 
 # schema のセットアップ

@@ -16,9 +16,7 @@ my $dm = Neko::DB::User->new();
             ],
         }),
     );
-    for my $model ($dm->schema_names) {
-        $dm->set_driver($model, $driver);
-    }
+    $dm->set_base_driver($driver);
 }
 
 # INSERT
