@@ -47,3 +47,8 @@ Data::Model ではストレージとして SQLite の他に memcached protocol �
 Memcached をつかう場合の例は下記のスクリプトにおいてあります。
 
 see script/memcached.pl
+
+** キャッシュを使ってみる
+
+DBI や Memcached のストレージへのアクセスするさいに Memcached などのキャッシュを
+挟む事が出来ます。の、予定。
